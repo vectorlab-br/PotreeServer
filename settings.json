@@ -3,9 +3,9 @@
 
 	"#": "(server-)paths from which to start looking for point clouds",
 	"path": [
-		"C:/dev/workspaces/potree/develop"
+		"/home/fcn/dev/vector3d/potree/potree"
 	],
-	"outputDirectory": "D:/dev/temp",
+	"outputDirectory": "/home/fcn/dev/vector3d/potree/temp",
 
 	"maxActiveWorkers": 1,
 	"authenticate": false,
