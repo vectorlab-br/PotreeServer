@@ -3,7 +3,8 @@
 
 	"#": "(server-)paths from which to start looking for point clouds",
 	"path": [
-		"/home/fcn/dev/vector3d/potree/potree"
+		"/home/fcn/dev/vector3d/potree/potree/pointclouds",
+		"/home/fcn/dev/vector3d/potree/PotreeServer/www"
 	],
 	"outputDirectory": "/home/fcn/dev/vector3d/potree/temp",
 

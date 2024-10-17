@@ -28,11 +28,12 @@ logger.info(`dirname ${__dirname}`);
 let settingsPath = `./settings.json`;
 let settings = null;
 
-logger.info("starting potree server");
+logger.info("Starting potree server");
 logger.info(`Using settings from: '${settingsPath}'`);
 
 if(fs.existsSync(settingsPath)){
 	settings = JSON.parse(fs.readFileSync(settingsPath, 'utf8'));
+	logger.info(`Settings: '${settings.path}'`);
 }else{
 	logger.error(`No settings found at: '${settingsPath}'`);
 	process.exit()
@@ -46,6 +47,9 @@ let filterInstances = new Map();
 function pointcloudsFromRequest(req){
 	let purl = url.parse(req.url, true);
 	let query = purl.query;
+
+	logger.info(`purl >>> '${purl}'`);
+	logger.info(`query >>> '${query}'`);
 
 	let v = (value, def) => ((value === undefined) ? def : value);
 
@@ -141,6 +145,8 @@ function clipRegionsFromRequest(req){
 			if(req.connection.user){
 				logger.info(`user: ${req.connection.user}`);
 			}
+		} else {
+			logger.info("No USER INFO");
 		}
 		
 		next();
@@ -372,5 +378,5 @@ function clipRegionsFromRequest(req){
 }
 
 server.listen(settings.port, () => {
-	logger.info(`server is listening on ${settings.port}`)
+	logger.info(`Server is listening on [ http://localhost:${settings.port} ]`)
 });

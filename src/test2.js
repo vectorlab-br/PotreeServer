@@ -50,7 +50,8 @@ const RegionFilter = require("./RegionFilter.js");
 
 let configurations = {
 	LION: {
-		cloudPath: "C:/dev/workspaces/potree/develop/pointclouds/lion_takanawa/cloud.js",
+		// cloudPath: "C:/dev/workspaces/potree/develop/pointclouds/lion_takanawa/cloud.js",
+		cloudPath: "/home/fcn/dev/vector3d/potree/potree/pointclouds/lion_takanawa/cloud.js",
 		planes: [
 			new Plane(new Vector3(-0.4482079723225482, -0.5119879644759681, -0.7327877849543242), 7.635331998803329),
 			new Plane(new Vector3(0.4482079723225482, 0.5119879644759681, 0.7327877849543242), -1.0383319988033284),
